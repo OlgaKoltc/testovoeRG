@@ -1,0 +1,30 @@
+.header {
+  flex-basis: 20%;
+  padding: 20px 0px 20px 0px;
+  background-color: rgba(72, 65, 69, 0.2);
+}
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  margin: 0 auto;
+}
+footer {
+  flex-basis: 20%;
+  padding: 20px 0px 20px 0px;
+  background-color: rgba(72, 65, 69, 0.2);
+  text-align: center;
+}
+@media screen and (max-width: 390px) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+
+  footer {
+    display: none;
+  }
+}

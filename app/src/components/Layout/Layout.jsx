@@ -1,5 +1,5 @@
 import { Outlet, NavLink } from "react-router-dom";
-import style from "./style.module.css";
+import style from "./layout.module.css";
 
 const Layout = () => {
   return (
@@ -10,10 +10,10 @@ const Layout = () => {
           <NavLink to="/posts">Blog</NavLink>
         </div>
       </header>
-      <main className={style.container}>
+      <main>
         <Outlet />
       </main>
-      <footer className="container">Test React</footer>
+      <footer>Test React</footer>
     </>
   );
 };

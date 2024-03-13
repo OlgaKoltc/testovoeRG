@@ -1,0 +1,17 @@
+.container {
+  margin: 0 auto;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.item__title {
+  font-weight: 500;
+}
+.item__body {
+  font-weight: 400;
+}
+.item__btn {
+  margin: 30px;
+}

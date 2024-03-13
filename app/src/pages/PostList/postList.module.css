@@ -1,0 +1,25 @@
+.container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.container__list {
+  list-style-type: none;
+}
+.list__item {
+  width: 80vw;
+  font-weight: 200;
+  margin-bottom: 20px;
+}
+.item__title {
+  font-weight: 600;
+}
+.btn__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  margin: 10px;
+}

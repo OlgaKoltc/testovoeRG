@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
+import style from "./postItem.module.css";
 
 const PostItem = () => {
   const { id } = useParams();
@@ -12,15 +13,15 @@ const PostItem = () => {
   }, [id]);
 
   return (
-    <div className="container">
+    <div className={style.container}>
       {post && (
         <>
-          <h2>{post.title}</h2>
-          <p>{post.body}</p>
+          <h2 className={style.item__title}>{post.title}</h2>
+          <div className={style.item__body}>{post.body}</div>
         </>
       )}
       <Link to={"/posts"}>
-        <button>Назад к постам</button>
+        <button className={style.item__btn}>Назад к постам</button>
       </Link>
     </div>
   );

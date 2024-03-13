@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Pagination from "../../components/Pagination/Pagination";
+import style from "./postList.module.css";
 
 const PostList = () => {
   const [posts, setPosts] = useState([]);
@@ -34,30 +35,26 @@ const PostList = () => {
   }
 
   return (
-    <div className="container">
-      <ul className="container__list">
+    <div className={style.container}>
+      <ul className={style.container__list}>
         {currentPost.map((post) => (
-          <li className="list__item" key={post.id}>
-            <Link className="item__title" to={`/${post.id}`}>
+          <li className={style.list__item} key={post.id}>
+            <Link className={style.item__title} to={`/${post.id}`}>
               {post.title}
             </Link>
-            <div className="item__body">{post.body}</div>
+            <div className={style.item__body}>{post.body}</div>
           </li>
         ))}
       </ul>
+      <div className={style.btn__block}>
+        <button onClick={prevPage}>Назад</button>
+        <button onClick={nextPage}>Вперед</button>
+      </div>
       <Pagination
         postsPerPage={postsPerPage}
         totalPosts={posts.length}
         paginate={paginate}
       />
-      <div className="btn">
-        <button className="btn btn_prev" onClick={prevPage}>
-          Назад
-        </button>
-        <button className="btn btn_next" onClick={nextPage}>
-          Вперед
-        </button>
-      </div>
     </div>
   );
 };
