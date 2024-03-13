@@ -1,0 +1,23 @@
+.header {
+  flex-basis: 20%;
+  padding-top: 20px;
+  background-color: rgba(72, 65, 69, 0.2);
+
+  .nav {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    margin: 0 auto;
+  }
+}
+.header a {
+  text-decoration: none;
+  color: black;
+}
+
+.header a:hover {
+  text-decoration: underline;
+}
+.header a:active {
+  color: blue;
+}

@@ -19,7 +19,7 @@ const PostItem = () => {
           <p>{post.body}</p>
         </>
       )}
-      <Link to={"/"}>
+      <Link to={"/posts"}>
         <button>Назад к постам</button>
       </Link>
     </div>
